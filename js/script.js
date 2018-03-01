@@ -17,8 +17,8 @@
 
 // Songs
 var mySong = {
-	"title":"24K Magic",
-	"artist":"Bruno Mars",
+	"title":"El Farsante",
+	"artist":"Ozuna",
 	"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
 	"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
 }
@@ -49,16 +49,27 @@ var myPlayList = [
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-  
-
-
-
+  myPlayList[0].artist;
+$('body').append("<h3>"+ myPlayList[0].title+"</h3>");
+$('body').append("<p>"+ myPlayList[0].artist+"</p>");
+$('body').append("<img src="+ myPlayList[0]['image-url']+">");
+$('body').append("<a href="+ myPlayList[0]['mp3-url']+">Listen Here!</a>");
 });
+{
+$('body').append("<h3>"+ myPlayList[1].title+"</h3>");
+$('body').append("<p>"+ myPlayList[1].artist+"</p>");
+$('body').append("<img src="+ myPlayList[1]['image-url']+">");
+$('body').append("<a href="+ myPlayList[1]['mp3-url']+">Listen Here!</a>");
+}
+
+
+
 
 function displayList(){
+for (var i=0;i < wishList.length;i++){
+    $('body').append("<p> I want to" + wishList[i].wish +"today.</p>");
 
-
-  
+}    
 }
 
 function clearList(){
